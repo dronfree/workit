@@ -22,5 +22,9 @@ $ ./artisan breeze:install blade
 ```
 # Serve
 ```
+(terminal 1)
 $ ./artisan serve
+
+(terminal 2)
+$ npm run dev
 ```
