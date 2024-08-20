@@ -14,12 +14,14 @@ class UsersSeeder extends Seeder
      */
     public function run(): void
     {
+        $password = Hash::make('demo123');
         for ($i = 1; $i < 10; $i++) {
             $name = 'manager' . $i;
             DB::table('users')->insert([
                 'name' => $name,
                 'email' => $name . '@test.com',
-                'password' => Hash::make('demo123'),
+                'password' => $password,
+                'partnership_id' => $i
             ]);
         }
     }
