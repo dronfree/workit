@@ -19,6 +19,9 @@ $ npm -v
 $ composer create-project laravel/laravel workit
 $ composer require laravel/breeze
 $ ./artisan breeze:install blade
+$ ./artisan install:api --passport
+$ ./artisan passport:client --personal
+(put "client_id" and "client_secret" to .env for runtime and to .env.example for distribution, restart app)
 ```
 # Serve
 ```
@@ -27,4 +30,8 @@ $ ./artisan serve
 
 (terminal 2)
 $ npm run dev
+```
+# Tricks
+```
+$ ./artisan migrate:fresh --seed
 ```
