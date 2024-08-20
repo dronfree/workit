@@ -34,4 +34,6 @@ $ npm run dev
 # Tricks
 ```
 $ ./artisan migrate:fresh --seed
+$ ./artisan route:list
+$ ./artisan event:list
 ```

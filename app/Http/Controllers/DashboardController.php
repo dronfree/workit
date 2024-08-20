@@ -14,9 +14,11 @@ class DashboardController extends Controller
     /**
      * 
      */
-    public function index(): View
+    public function index(Request $request): View
     {
-        return view('dashboard');
+        return view('dashboard', [
+            'token' => $request->user()->createToken('token_name')->accessToken,
+        ]);
     }
 
 }
