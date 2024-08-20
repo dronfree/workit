@@ -17,6 +17,8 @@ $ npm -v
 8.15.0
 
 $ composer create-project laravel/laravel workit
+$ composer require laravel/breeze
+$ ./artisan breeze:install blade
 ```
 # Serve
 ```
