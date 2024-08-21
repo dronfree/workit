@@ -15,7 +15,7 @@ class OrdersService {
         $this->repository = $repository;
     }
     
-    public function createFromRequest(Request $request) 
+    public function createOrder(Request $request) 
     {
         // @TODO validation
         $data = $request->only([

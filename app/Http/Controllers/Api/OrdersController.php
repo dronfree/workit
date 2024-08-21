@@ -15,10 +15,10 @@ class OrdersController extends Controller
     {
         $this->service = $service;
     }
-    
+
     public function create(Request $request) 
     {
-        $res = $this->service->createFromRequest($request);
+        $res = $this->service->createOrder($request);
         return $res;
     }
 }
