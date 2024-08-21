@@ -21,4 +21,11 @@ class OrdersController extends Controller
         $res = $this->service->createOrder($request);
         return $res;
     }
+
+    public function assign(Request $request) 
+    {
+        $res = $this->service->assignWorker($request);
+        return $res;
+    }
+    
 }

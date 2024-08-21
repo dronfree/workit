@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use Illuminate\Support\Facades\Log;
-use App\Models\Orders;
 use App\Models\Order;
 
 class OrdersRepository {
@@ -15,6 +14,11 @@ class OrdersRepository {
         $this->order = $order;
     }
 
+    public function get($id)
+    {
+        return $this->order::find($id);
+    }
+
     public function create(array $data) : Order 
     {
         $order = new $this->order;
@@ -22,4 +26,10 @@ class OrdersRepository {
         $order->save();
         return $order->fresh();
     }
+
+    public function assign(array $data) : void
+    {
+        
+    }
+
 }
