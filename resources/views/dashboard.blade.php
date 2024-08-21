@@ -12,7 +12,7 @@
                     <section>
                         <header>
                             <h2 class="text-lg font-medium text-gray-900">
-                                {{ __('Token') }}
+                                {{ __('Personal access token') }}
                             </h2>
                             <p class="mt-1 text-sm text-gray-600">
                                 {{ __($token) }}
@@ -24,15 +24,42 @@
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
-                    
+                    <section>
+                        <header>
+                        <h2 class="text-lg font-medium text-gray-900">
+                                {{ __('Create new order') }}
+                            </h2>
+                        </header>
+                    </section>
+                    <pre>
+curl {{env('APP_URL')}}/api/orders \
+-X POST \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{__($token)}}" \
+-d '{"type_id": 1, "partnership_id": 1, "description": "order description 01", "date": "2024-08-21", "address": "order address 01", "amount": 9}'
+</pre>
                 </div>
             </div>
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
-                    
+                    <section>
+                        <header>
+                        <h2 class="text-lg font-medium text-gray-900">
+                                {{ __('Assign worker to order') }}
+                            </h2>
+                        </header>
+                    </section>
+                    <pre>
+curl http://localhost:8000/api/orders/assign \
+-X POST \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer {{__($token)}}" \
+-d '{"order_id":9, "worker_id":9}'
+</pre>
                 </div>
             </div>
+
         </div>
     </div>
 </x-app-layout>
