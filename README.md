@@ -1,3 +1,46 @@
+# Install
+```
+$ mkdir workit
+
+$ cd workit
+
+$ git clone git@github.com:dronfree/workit.git .
+
+$ composer install
+
+$ npm install
+
+$ cp .evn.example .env
+
+$ touch database/database.sqlite
+
+$ php artisan migrate:fresh --seed
+
+$ php artisan passport:install
+(Would you like to run all pending database migrations? answer no)
+
+$ php artisan passport:client --personal
+(specify PASSPORT_PERSONAL_ACCESS_CLIENT_ID and PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET in .env)
+
+
+$ php artisan serve
+(terminal 1)
+
+$ npm run dev
+(terminal 2)
+```
+
+# Run
+
+Go to http://localhost:8000
+
+# Usage
+
+1. There are 9 managers from manager1@test.com to manager9@test.com
+2. Password for all is "demo123"
+3. Login with credentials (manager1@test.com / demo123 )
+4. Personal access token and two cURL example API calls will be on your dashboard.
+
 # Workflow
 ```
 $ php -v
